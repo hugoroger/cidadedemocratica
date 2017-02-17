@@ -5,16 +5,16 @@
     <li id="li_local_estado">
       <%= hidden_field_tag "local[pais_id]", 1 %>
       <%= label_tag :estado, "Estado" %>
-      <%= select_estado(local, :cidade_corrente => @cidade_corrente) %>
+      <%#= select_estado(local, :cidade_corrente => @cidade_corrente) %>
     </li>
     <li id="li_local_cidade">
       <%= label_tag :cidade, "Cidade" %>
-      <%= select_cidade(local, :cidade_corrente => @cidade_corrente) %>
+      <%#= select_cidade(local, :cidade_corrente => @cidade_corrente) %>
       <%= image_tag("spinners/spinner.gif", :id => "spinner_cidade", :style => "display:none;") %>
     </li>
     <li id="li_local_bairro">
       <%= label_tag :bairro, "Bairro" %>
-      <%= select_bairro(local, :cidade_corrente => @cidade_corrente, :first_option => " ") %>
+      <%#= select_bairro(local, :cidade_corrente => @cidade_corrente, :first_option => " ") %>
       <%= image_tag("spinners/spinner.gif", :id => "spinner_bairro", :style => "display:none;") -%>
     </li>
     <li id="li_local_cep">

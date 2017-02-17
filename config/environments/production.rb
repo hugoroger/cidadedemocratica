@@ -77,4 +77,18 @@ Cidadedemocratica::Application.configure do
   #     :sender_address => %{"no-reply" <no-reply@cidadedemocratica.org.br>},
   #     :exception_recipients => [ENV['EXCEPTION_NOTIFICATION_EMAIL']]
   #   }
+
+config.action_mailer.raise_delivery_errors = true 
+    config.action_mailer.default_url_options = { host: '198.1.64.21', port: "3000" }
+    ActionMailer::Base.delivery_method = :smtp
+    ActionMailer::Base.perform_deliveries = true
+    config.action_mailer.smtp_settings = {
+        :address              => "smtp.gmail.com",
+        :port                 => 25,
+        :domain               => "gmail.com",
+        :user_name            => "testing.bittern@gmail.com",
+        :password             => "bittern1234",
+        :authentication       => :plain,
+        :enable_starttls_auto => true
+    }
 end

@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   # Letter opener
   if Rails.env.development? or Rails.env.staging?
-    mount LetterOpenerWeb::Engine, at: "/letter_opener"
+   # mount LetterOpenerWeb::Engine, at: "/letter_opener"
   end
 
   # Configurações

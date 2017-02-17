@@ -36,7 +36,7 @@ class TopicosController < ApplicationController
       com_tag(@tag)
 
     @topicos = topicos.includes(:tags, :user => [:dado, :imagens], :locais => [:estado, :cidade]).
-      paginate(:order => @order, :page => params[:page])
+      paginate(:page => params[:page])
 
     @topicos_user_stats = topicos.includes(:user).count(:group => "users.type") if !params[:user_type]
 

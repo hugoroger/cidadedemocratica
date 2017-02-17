@@ -17,7 +17,7 @@ class UsersController < ApplicationController
     filtro_de_localizacao(users)
 
     @users = users.includes(:dado, :imagens, :local => [:estado, :cidade]).
-      paginate(:page => params[:page], :per_page => 15, :order => @order)
+      paginate(:page => params[:page], :per_page => 15)
     @users_stats = users.count(:group => "users.type")
   end
 

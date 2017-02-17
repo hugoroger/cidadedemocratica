@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.2.19'
-
+gem 'rails', '3.2.22'
+gem 'test-unit'
 gem 'activeadmin'
 gem 'acts_as_commentable_with_threading'
 gem 'acts_as_list'
@@ -20,10 +20,10 @@ gem 'exception_notification'
 gem 'fastercsv'
 gem 'galetahub-salty_slugs', :require => 'salty_slugs', :git => 'git://github.com/akitaonrails/salty_slugs.git'
 gem 'in_place_editing'
-gem 'inherited_resources'
+#gem 'inherited_resources'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
-gem 'json', '1.7.7', :platforms => [:ruby_18]
+gem 'json'#, '1.7.7', :platforms => [:ruby_18]
 gem 'memcache-client'
 gem 'meta-tags', :require => 'meta_tags'
 gem 'mini_magick', '~> 3.5.0'
@@ -68,7 +68,7 @@ group :assets do
 end
 
 group :staging, :development do
-  gem 'letter_opener_web', '~> 1.0'
+  #gem 'letter_opener_web', '~> 1.0'
 end
 
 group :production do
